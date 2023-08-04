@@ -1,0 +1,60 @@
+<!--
+Student Name: Umanga Shrestha
+ID: C0882758
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registration</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="js/script.js"></script>
+  </head>
+  <body>
+    <body>
+        <div class="container">
+          <h1>User Registration</h1>
+          <form id="registrationForm" onsubmit="validateForm(event)">
+            <div class="input-field">
+              <label for="firstName">First Name:</label>
+              <input type="text" id="firstName" onfocusout="checkNull(event)" required>
+              <div class="error-msg"></div>
+            </div>
+            <div class="input-field">
+              <label for="lastName">Last Name:</label>
+              <input type="text" id="lastName" onfocusout="checkNull(event)" required>
+              <div class="error-msg"></div>
+            </div>
+            <div class="input-field">
+              <label for="email">Email:</label>
+              <input type="text" id="email" onfocusout="checkNull(event); checkEmail(event)" required>
+              <div class="error-msg"></div>
+            </div>
+            <div class="input-field">
+              <label for="dob">Date of Birth:</label>
+              <input type="date" id="dob" required>
+              <div class="error-msg"></div>
+            </div>
+            <div class="input-field">
+              <label>Gender:</label>
+              <input type="radio" name="gender" value="male" required> Male
+              <input type="radio" name="gender" value="female" required> Female
+              <div class="error-msg"></div>
+            </div>
+            <div class="input-field">
+              <label for="password">Password:</label>
+              <input type="password" id="password" onfocusout="checkNull(event); checkPassword(event)" required>
+              <div class="error-msg"></div>
+            </div>
+            <div class="input-field">
+              <label for="confirmPassword">Confirm Password:</label>
+              <input type="password" id="confirmPassword" onfocusout="checkNull(event); checkConfirmPassword(event)" required>
+              <div class="error-msg"></div>
+            </div>
+            <div class="error-msg"></div>
+            <button type="submit">Register</button>
+          </form>
+        </div>
+</body>
+</html>
